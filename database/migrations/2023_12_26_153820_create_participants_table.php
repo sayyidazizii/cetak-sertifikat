@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInvItemUnitsTable extends Migration
+class CreateParticipantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateInvItemUnitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('inv_item_units', function (Blueprint $table) {
-            $table->bigIncrements('item_unit_id');
-            $table->string('item_unit_name');
-            $table->integer('created_id');
+        Schema::create('participants', function (Blueprint $table) {
+            $table->bigIncrements('participant_id');
+            $table->string('participant_name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateInvItemUnitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inv_item_units');
+        Schema::dropIfExists('participants');
     }
 }

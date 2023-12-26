@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoreCustomersTable extends Migration
+class CreateWinnersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateCoreCustomersTable extends Migration
      */
     public function up()
     {
-        Schema::create('core_customers', function (Blueprint $table) {
-            $table->bigIncrements('customer_id');
-            $table->string('customer_name');
-            $table->string('address');
-            $table->string('telp');
+        Schema::create('winners', function (Blueprint $table) {
+            $table->bigIncrements('winner_id');
+            $table->string('winner_name');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateCoreCustomersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('core_customers');
+        Schema::dropIfExists('winners');
     }
 }

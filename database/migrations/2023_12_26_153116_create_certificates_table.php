@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCustomerIdTempsTable extends Migration
+class CreateCertificatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateCustomerIdTempsTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer_id_temps', function (Blueprint $table) {
-            $table->bigIncrements('customer_id_temp_id');
-            $table->integer('customer_id');
+        Schema::create('certificates', function (Blueprint $table) {
+            $table->bigIncrements('certificate_id');
+            $table->integer('participant_id');
+            $table->string('certificate_no');
+            $table->date('certificate_date');
+            $table->integer('winner_id');
             $table->integer('created_id');
             $table->timestamps();
         });
@@ -28,6 +31,6 @@ class CreateCustomerIdTempsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_id_temps');
+        Schema::dropIfExists('certificates');
     }
 }

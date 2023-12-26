@@ -20,14 +20,14 @@
           font-size:12pt;
       }
 
-      #loader { 
+      /* #loader { 
             border: 12px solid #f3f3f3; 
             border-radius: 50%; 
             border-top: 12px solid #444444; 
             width: 70px; 
             height: 70px; 
             animation: spin 1s linear infinite; 
-        } 
+        }  */
          
         @keyframes spin { 
             100% { 
@@ -44,23 +44,9 @@
             margin: auto; 
         } 
     </style>
-    <div id="loader" class="center"></div> 
+    <!-- <div id="loader" class="center"></div>  -->
     <script> 
-        document.onreadystatechange = function() { 
-            if (document.readyState !== "complete") { 
-                document.querySelector( 
-                "body").style.visibility = "hidden"; 
-                document.querySelector( 
-                "#loader").style.visibility = "visible"; 
-            } else { 
-                document.querySelector( 
-                "#loader").style.display = "none"; 
-                document.querySelector( 
-                "body").style.visibility = "visible"; 
-            } 
-        }; 
-
-
+       
         $(document).ready(function(){
         $('#tabel-data').DataTable();
     });
@@ -116,27 +102,27 @@
               <span class="hide-menu">Menu</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/sales-invoice" aria-expanded="false">
+              <a class="sidebar-link" href="/certificate" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
-                <span class="hide-menu">Transaksi</span>
+                <span class="hide-menu">Cetak Piagam</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/sales-invoice/history" aria-expanded="false">
+              <a class="sidebar-link" href="/participant" aria-expanded="false">
                 <span>
                   <i class="ti ti-file-description"></i>
                 </span>
-                <span class="hide-menu">Riwayat</span>
+                <span class="hide-menu">Peserta</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/inv-item" aria-expanded="false">
+              <a class="sidebar-link" href="/winner" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
-                <span class="hide-menu">Item</span>
+                <span class="hide-menu">Juara</span>
               </a>
             </li>
             <li hidden class="nav-small-cap">
@@ -224,7 +210,7 @@
        
     <!-- end main -->
         <div class="py-6 px-6 text-center">
-        <p class="mb-0 fs-4">Developed by <a href="sayyidaziz.epizy.com" target="_blank" class="pe-1 text-primary text-decoration-underline">@sayyidaziz</a> 2023</p>
+        <p class="mb-0 fs-4">Developed by <a href="https://sayyidazizii.github.io" target="_blank" class="pe-1 text-primary text-decoration-underline">@sayyidaziz</a> 2023</p>
         </div>
       </div>
     </div>

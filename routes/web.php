@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SalesInvoiceController;
 use App\Http\Controllers\InvItemController;
+use App\Http\Controllers\CertificateController;
 use App\Models\InvItem;
 
 /*
@@ -39,3 +40,5 @@ Route::post('/sales-order/add-array', [SalesInvoiceController::class, 'processAd
 
 
 Route::get('/inv-item', [InvItemController::class, 'index'])->name('inv-item');
+
+Route::get('/certificate', [CertificateController::class, 'index'])->name('certificate');
