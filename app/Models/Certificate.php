@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Certificate extends Model
 {
     use HasFactory;
+    protected $guarded=['certificate_id'];
 }

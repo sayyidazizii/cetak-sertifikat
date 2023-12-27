@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Dwita - Binatu</title>
+    <title>KARATE KARANGANYAR</title>
 
     <!-- Scripts -->
     <script src="{{  asset('bootstrap/js/bootstrap.min.js')  }}" defer></script>
@@ -33,14 +33,14 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="{{ asset('assets/img/bg.jpg') }}" width="180" alt="">
+                  <img src="{{ asset('assets/img/karate.png') }}" width="180" alt="">
                 </a>
-                <p class="text-center">Dwita Binatu </p>
+                <p class="text-center">KARATE KARANGANYAR </p>
                 <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                     @error('email')

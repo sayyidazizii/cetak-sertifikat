@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Dwita - Binatu</title>
+    <title>KARATE KARANGANYAR</title>
 
     <!-- Scripts -->
     <script src="{{  asset('bootstrap/js/bootstrap.min.js')  }}" defer></script>

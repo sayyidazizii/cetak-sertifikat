@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Dwita Binatu</title>
+    <title>KARATE KARANGANYAR</title>
 
 
     <!-- <script src="https://code.jquery.com/jquery-3.1.0.js"></script>

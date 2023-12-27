@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Dwita-Binatu</title>
+        <title>KARATE KARANGANYAR</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,9 +25,9 @@
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
-              <p class="text-center fw-bold">Dwita - Binatu</p>
+              <p class="text-center fw-bold">KARATE KARANGANYAR</p>
                 <a href="/login" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="{{ asset('assets/img/bg.jpg') }}" width="180" alt="">
+                  <img src="{{ asset('assets/img/karate.png') }}" width="180" alt="">
                 </a>
                 <form>
                   <a href="/login" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Masuk</a>
