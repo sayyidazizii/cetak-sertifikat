@@ -13,6 +13,7 @@
     <div class="card-body">
       <h5 class="card-title fw-semibold mb-4 text-center">List Certificate</h5>
       <div class="container">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -66,7 +67,7 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody  id="myTable">
               @php
               $total = 0;
               $no = 1;
@@ -84,7 +85,7 @@
                 <td>
                   <a href="certificate/edit/{{ $item->certificate_id }}" class="btn btn-warning btn-sm"><i class="ti ti-pencil"></i></a>
                   <a href="{{ route('hapus-certificate', ['certificate_id' => $item->certificate_id]) }}" name='Reset' class='btn btn-danger btn-sm' onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini ?')"><i class="ti ti-trash"></i></a>
-                  <a href="certificate/print/{{ $item->certificate_id }}" class="btn btn-secondary btn-sm"><i class="ti ti-file-description""></i></a>
+                  <a href="certificate/print/{{ $item->certificate_id }}" target="_blank" class="btn btn-secondary btn-sm"><i class="ti ti-file-description""></i></a>
                 </td>
               </tr>
               @php

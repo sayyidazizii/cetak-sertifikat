@@ -45,12 +45,7 @@
         } 
     </style>
     <!-- <div id="loader" class="center"></div>  -->
-    <script> 
-       
-        $(document).ready(function(){
-        $('#tabel-data').DataTable();
-    });
-    </script>  
+    
    
 
     <!-- Fonts -->
@@ -61,7 +56,7 @@
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <!-- <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"> -->
-    <link rel="shortcut icon" type="image/png" href="{{ asset('Modernize-1.0.0/src/assets/images/logos/favicon.png') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('Modernize-1.0.0/src/assets/images/logos/logo.png') }}" />
     <link rel="stylesheet" href="{{ asset('Modernize-1.0.0/src/assets/css/styles.min.css') }}" />
 </head>
 <body>
@@ -75,7 +70,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="/" class="text-nowrap logo-img">
             <img src="{{ asset('Modernize-1.0.0/src/assets/images/logos/dark-logo.svg') }}" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -112,17 +107,17 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="/participant" aria-expanded="false">
                 <span>
-                  <i class="ti ti-file-description"></i>
+                  <!-- <i class="ti ti-file-description"></i> -->
                 </span>
-                <span class="hide-menu">Peserta</span>
+                <!-- <span class="hide-menu">Peserta</span> -->
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="/winner" aria-expanded="false">
                 <span>
-                  <i class="ti ti-cards"></i>
+                  <!-- <i class="ti ti-cards"></i> -->
                 </span>
-                <span class="hide-menu">Juara</span>
+                <!-- <span class="hide-menu">Juara</span> -->
               </a>
             </li>
             <li hidden class="nav-small-cap">
@@ -236,75 +231,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
    
     <script>
-      function elements_add(){
-        var customer_id_view           = $("#customer_id_view").val();
-        $('#customer_id_view').hide();
-        // $("#customer_id").val(customer_id);
-        console.log(customer_id);
-        $.ajax({
-          type: "POST",
-            url : "{{route('elements-add-sales-invoice')}}",
-            data: {
-                'customer_id'                   : customer_id_view, 
-                '_token'                        : '{{csrf_token()}}'
-            },
-            success: function(msg){
-                location.reload();
-            }
-
-        });
-    }
-    
-
 
 
     $(document).ready(function() {
       var customer_id           = $("#customer_id").val();
       $('.js-example-basic-single').select2();
       // $("#item_id").select2();
+
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
     });
     
-    $('#customer_id_view').change(function(){
-        var customer_id = $('#customer_id_view').val();
-        $.ajax({
-          type: "POST",
-            url : "{{route('elements-add-sales-invoice')}}",
-            data: {
-                'customer_id'                   : customer_id, 
-                '_token'                        : '{{csrf_token()}}'
-            },
-            success: function(msg){
-                location.reload();
-            }
-
-        });
-        $('#customer_id_view').hide();
-
-
-    });
-
-
-
-
-    function processAddArraySalesOrderItem(){
-        var item_id                         = document.getElementById("item_id").value;
-        var quantity			                  = document.getElementById("quantity").value;
-        console.log(item_id,quantity);
-        $.ajax({
-            type: "POST",
-            url : "{{route('sales-order-add-array')}}",
-            data: {
-                'item_id'                       : item_id, 
-                'quantity' 			                : quantity,
-                '_token'                        : '{{csrf_token()}}'
-            },
-            success: function(msg){
-                location.reload();
-            }
-        });
-    }
-
-
 
 
     </script>

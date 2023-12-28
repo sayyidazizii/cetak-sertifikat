@@ -137,6 +137,22 @@ class CertificateController extends Controller
         //  $pdf::Image($image, 5, 5, 1000, 700, '', '', '', false, 1080, '', false, false, 0);
 
         $tbl = "
+            <table width=\" 100% \" style=\"text-align: center; \">
+                <tr>
+                    <th style=\"font-size:10px; \"></th>
+                </tr>
+                <tr>
+                    <th style=\"font-size:10px; \"></th>
+                </tr>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <tr>
+                    <th style=\"font-size:30px;font-weight: bold \">".$this->getNamebyId($data['participant_id'])."</th>
+                </tr>
+                <br><br><br>
+                <tr>
+                    <th style=\"font-size:20px; \">".$this->getWinnerbyId($data['winner_id'])."</th>
+                </tr>
+            </table>
             
         ";
         $pdf::writeHTML($tbl, true, false, false, false, '');
