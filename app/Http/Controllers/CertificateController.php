@@ -23,7 +23,8 @@ class CertificateController extends Controller
     {
         $items = Certificate::select('*')
         ->where('data_state',0)
-        ->simplePaginate(3);
+        ->orderBy('created_at','desc')
+        ->simplePaginate(5);
         $participant = Participant::select('*')
         ->get();
         $winner = Winner::select('*')
@@ -131,9 +132,9 @@ class CertificateController extends Controller
         $imageHeight = $pageHeight;
        
 
-        $image = 'assets/img/sertifikat.png';
+        // $image = 'assets/img/sertifikat.png';
          // Display image on full page
-         $pdf::Image($image, 0, 0, $imageWidth, $imageHeight, 'PNG', '', '', true, 150);
+        //  $pdf::Image($image, 0, 0, $imageWidth, $imageHeight, 'PNG', '', '', true, 150);
         //  $pdf::Image($image, 5, 5, 1000, 700, '', '', '', false, 1080, '', false, false, 0);
 
         $tbl = "
@@ -146,7 +147,7 @@ class CertificateController extends Controller
                 </tr>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <tr>
-                    <th style=\"font-size:30px;font-weight: bold \">".$this->getNamebyId($data['participant_id'])."</th>
+                    <th style=\"font-size:30px;font-weight: bold; \">".strtoupper($this->getNamebyId($data['participant_id']))."</th>
                 </tr>
                 <br><br><br>
                 <tr>

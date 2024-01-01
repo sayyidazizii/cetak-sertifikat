@@ -1,6 +1,6 @@
 /*
 SQLyog Professional v13.1.1 (64 bit)
-MySQL - 8.0.30 : Database - if0_35515649_certificate
+MySQL - 8.0.30 : Database - prod_cetak_sertifikat
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 8.0.30 : Database - if0_35515649_certificate
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`if0_35515649_certificate` ;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`prod_cetak_sertifikat` ;
 
-USE `if0_35515649_certificate`;
+USE `prod_cetak_sertifikat`;
 
 /*Table structure for table `certificates` */
 
