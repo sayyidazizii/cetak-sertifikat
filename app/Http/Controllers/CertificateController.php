@@ -24,7 +24,7 @@ class CertificateController extends Controller
         $items = Certificate::select('*')
         ->where('data_state',0)
         ->orderBy('created_at','desc')
-        ->simplePaginate(5);
+        ->get();
         $participant = Participant::select('*')
         ->get();
         $winner = Winner::select('*')
@@ -147,7 +147,7 @@ class CertificateController extends Controller
                 </tr>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <tr>
-                    <th style=\"font-size:30px;font-weight: bold; \">".strtoupper($this->getNamebyId($data['participant_id']))."</th>
+                    <th style=\"font-size:30px;font-weight: bold;\">".strtoupper($this->getNamebyId($data['participant_id']))."</th>
                 </tr>
                 <br><br><br>
                 <tr>
